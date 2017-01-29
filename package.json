@@ -30,6 +30,8 @@
     "main-bower-files": "^2.5.0",
     "proxy-middleware": "^0.15.0",
     "run-sequence": "^1.2.2",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2",
     "wiredep": "^4.0.0"
   },
   "eslintConfig": {
@@ -46,6 +48,7 @@
     }
   },
   "scripts": {
-    "start:gulp": "concurrently 'node server/express-server/index.js' 'gulp serve'"
+    "start:gulp": "concurrently 'node server/express-server/index.js' 'gulp serve'",
+    "start:webpack": "concurrently 'node server/express-server/index.js' 'webpack-dev-server --content-base app --open'"
   }
 }
